@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disk Scheduling Algorithms</title>
+    <link rel="stylesheet" href="Disk Scheduling Algorithms.css">
+</head>
+<body>
+    <video autoplay muted loop id="background-video">
+        <source src="BackGround_Video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="container">
+        <h1>Disk Scheduling Algorithms</h1>
+        <form id="diskForm">
+            <label for="requests" data-tooltip="Enter comma-separated numbers">Enter Disk Requests (comma-separated):</label>
+            <input type="text" id="requests" name="requests" required>
+            <br>
+            <label for="currentPosition" data-tooltip="Enter the current head position">Current Head Position:</label>
+            <input type="number" id="currentPosition" name="currentPosition" required>
+            <br>
+            <label for="totalSectors" data-tooltip="Enter total number of sectors">Total Number of Sectors:</label>
+            <input type="number" id="totalSectors" name="totalSectors" required>
+            <br>
+            <label for="algorithm" data-tooltip="Select a disk scheduling algorithm">Select Algorithm:</label>
+            <select id="algorithm" name="algorithm">
+                <option value="fcfs">FCFS</option>
+                <option value="sstf">SSTF</option>
+                <option value="scan">SCAN</option>
+                <option value="cscan">C-SCAN</option>
+                <option value="look">LOOK</option>
+                <option value="clook">C-LOOK</option>
+            </select>
+            <br>
+            <button type="submit">Submit</button>
+        </form>
+        <div id="result"></div>
+        <canvas id="visualization" width="800" height="400" data-tooltip="Disk Scheduling Visualization"></canvas>
+    </div>
+    <script src="Disk Scheduling Algorithms.js"></script>
+</body>
+</html>
